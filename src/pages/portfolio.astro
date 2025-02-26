@@ -1,0 +1,36 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { Image } from "astro:assets";
+import { getCollection } from 'astro:content';
+const portfolioItems = await 
+getCollection("portfolio");
+const pageTitle = "My Astro Learning Blog";
+//const allPosts = Object.values(await import.meta.glob('./posts/*.md', { eager: true }));
+interface Post {
+  data: {
+    title: string;
+    date: string;
+	slug: string;
+    image_url: string;
+	image_alt: string;
+	project_roles: string;
+  };
+}
+// Sort the portfolioItems array by date in descending order
+const sortedPortfolioItems = portfolioItems.sort((a, b) => {
+  return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+});
+---
+<Layout pageTitle={pageTitle}>
+
+	<h1 class="heading">My portfolio</h1>
+	{sortedPortfolioItems.map((item) => (
+		<div>
+		<h3>
+			<a href={`/portfolio/${item.data.slug}`}>{item.data.title}</a>
+		</h3>
+        <p style="margin-top:0;">{item.data.date} — {item.data.project_roles}</p>
+		  <Image src={item.data.image_url} alt={item.data.image_alt} class="portfolioArticle"/>  
+		</div>
+	  ))}
+</Layout>

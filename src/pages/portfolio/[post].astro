@@ -1,0 +1,59 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { getCollection, getEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+// Get the id from the URL params
+const { id } = Astro.params;
+
+// Debug: Log the id to see what's being received
+console.log('Received id:', id);
+
+// Safeguard against undefined id
+//if (!id) {
+//  return Astro.redirect('/404'); // Redirect to a 404 page if id is undefined
+//}
+
+// Fetch the entry using the id
+const entry = await getEntry("portfolio", id);
+
+// If the entry doesn't exist, return a 404
+if (!entry) {
+  return Astro.redirect('/404');
+}
+
+interface PortfolioItem {
+  title: string;
+  date: string;
+  slug: string;
+  image_url: ImageMetadata;
+  image_alt: string;
+  project_abstract: string;
+  project_roles: string;
+  project_deliverable: string;
+}
+// Type assertion to ensure entry.data matches our interface
+const item: PortfolioItem = entry.data;
+---
+<Layout pageTitle={item.title}>
+  <Nav />
+  <div>
+    <h2>
+    {item.title}
+    </h2>
+  </div>
+  <Image src={item.image_url} alt={item.image_alt} class="portfolioArticle"/>
+    <p>{item.date}</p>
+ 
+  <h3>{item.project_abstract}</h3>
+  <p>Project roles: {item.project_roles}</p>
+  <p>Project deliverable: {item.project_deliverable}</p>
+
+  <article>
+  <slot /> <!-- content is injected here -->
+  </article>
+  <Footer />
+</Layout>

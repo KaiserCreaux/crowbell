@@ -1,0 +1,21 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+import { Debug } from 'astro:components';
+// Get the id from the URL params
+const { id } = Astro.params;
+console.log('Astro.params:', Astro.params);
+
+---
+<Layout >
+You
+<Debug {Astro.params} />
+</Layout>
+
+
+
+

@@ -1,0 +1,186 @@
+@import "tailwindcss";
+
+.container {
+	margin: auto;
+	max-width: 500px;
+	font-family: sans-serif;
+  }
+  .siteTitle {
+	  margin: 1em 0 0.5em 0;
+	  font-weight: 300;
+	  font-family: chivo, sans-serif;
+	  font-size: 3rem;
+	  margin: 3rem 0;
+	  color: #003844;
+	  /*background: #fff url(../images/bartoszkosowski.jpg) no-repeat center left; ADD AN IMAGE TO THE H1*/
+  }
+  
+  .emphasis {
+	font-style: italic;
+  }
+  
+  .heading {
+	  margin: 1em 0 0.5em 0;
+	  font-weight: 300;
+	  font-size: 2rem;
+	  color: #003844;
+	  font-family: chivo, sans-serif;
+  }
+
+  h2 {
+	margin: 1em 0 0.5em 0;
+	font-weight: 300;
+	font-family: chivo, sans-serif;
+	font-size: 2rem;
+	color: #003844;
+}
+
+  h3 {
+	  margin: 1em 0 0.5em 0;
+	  font-weight: 300;
+	  font-family: chivo, sans-serif;
+	  font-size: 1.2rem;
+	  color: #003844;
+  }
+  
+  p, li, label {
+	  margin: 1em 0 0.5em 0;
+	  font-weight: 300;
+	  font-family: chivo, sans-serif;
+	  position: relative;
+	  font-size: 1.3rem;
+	  color: #003844;
+  }
+  
+ 
+  a:not(.nav) {
+	font-weight: bold;
+	text-decoration: none;
+	padding: 2px;
+	background: linear-gradient(to right, #01a7c2, #a3bac3);
+	background-repeat: repeat-x;
+	background-size: 100% 2px;
+	background-position: 0 95%;
+	-webkit-transition: all 150ms ease-in-out;
+	-moz-transition: all 150ms ease-in-out;
+	-ms-transition: all 150ms ease-in-out;
+	-o-transition: all 150ms ease-in-out;
+	transition: all 150ms ease-in-out;
+}
+
+a:hover {
+	color: #a3bac3;
+	font-weight: bold;
+	text-decoration: none;
+	padding-bottom: 2px;
+	background: linear-gradient(to right, #ff8600, #a3bac3);
+	background-repeat: repeat-x;
+	background-size: 100% 2px;
+	background-position: 50% 95%;
+	-webkit-transition: color 150ms ease-in-out;
+	-moz-transition: color 150ms ease-in-out;
+	-ms-transition: color 150ms ease-in-out;
+	-o-transition: color 150ms ease-in-out;
+	transition: color 150ms ease-in-out;
+}
+
+a:focus {
+	outline: none;
+	background: #E9D8FD;
+}
+
+
+ form { max-width:420px; margin: 2em auto; }
+  
+  [type="submit"] {
+	font-family: chivo, sans-serif;
+	width: 100%;
+	background:#01a7c2;
+	border-radius:5px;
+	border:0;
+	cursor:pointer;
+	color:eaebed;
+	font-size:1.3rem;
+	padding-top:.7em;
+	padding-bottom:.7em;
+	transition: all 0.3s;
+	margin-top:-4px;
+	font-weight:600;
+  }
+  [type="submit"]:hover { background:#ff8600;}
+  
+  textarea {
+	height: 150px;
+	line-height: 150%;
+	resize:vertical;
+  }
+  
+  .feedbackInput {
+	color:#003844;
+	font-family: chivo;
+	font-weight:500;
+	font-size: 18px;
+	border-radius: 5px;
+	line-height: 22px;
+	background-color: transparent;
+	border:2px solid #a3bac3;
+	transition: all 0.3s;
+	padding: 13px;
+	margin-bottom: 15px;
+	width:100%;
+	box-sizing: border-box;
+	outline:0;
+  }
+  
+  .feedbackInput:focus { border:2px solid #CC4949; }
+  
+  .sideLine {
+	border-top: 2px solid #a3bac3;
+	padding-top: 1em;
+	display: flex;
+	flex-direction: column;
+	margin-top: 2em;
+  }
+
+  .topLine & .footer {
+    background-image: linear-gradient(#eaebed 0%, #ffffff 2%);
+	border-top: 2px solid #a3bac3;
+	display: flex;
+	flex-direction: column;
+	padding: 1em;
+	margin-top: 1em;
+  }
+  
+  .footerText {
+	margin: auto;
+	color: #003844;
+	font-weight: 300;
+	font-family: chivo, sans-serif;
+	font-size: 1.3rem;
+  }
+  
+  .footerText a:visited {
+	color:#01a7c2;
+	text-decoration:none;
+  }
+  
+  .portfolioArticle {
+	border-left: 2px solid #a3bac3;
+	margin-bottom: 24px;
+	padding-left: 24px;
+	width: 40em;
+	height: auto;
+   }
+  
+  .nav-links {
+	display: flex;
+	list-style: none;
+	padding-left: 0;
+  }
+  .nav-link-item {
+	padding-right: 2rem;
+  }
+  .nav-link-text {
+	color: #003844;
+  }
+  
