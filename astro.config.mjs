@@ -7,9 +7,11 @@ import tailwindcss from "@tailwindcss/vite";
 
 import netlify from '@astrojs/netlify';
 
+import react from '@astrojs/react';
+
 // https://astro.build/config
 export default defineConfig({
   vite: { plugins: [tailwindcss()], },
-  integrations: [preact(), mdx(), sitemap()],
+  integrations: [preact(), mdx(), sitemap(), react()],
   adapter: netlify(),
 })
