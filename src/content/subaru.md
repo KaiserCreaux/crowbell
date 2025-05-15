@@ -1,5 +1,5 @@
 ---
-title: "Subaru"
+title: "Subaru Gear"
 date: "2025"
 slug: "subaru"
 image_url: "./subaruHero.png"
@@ -10,17 +10,17 @@ project_deliverable: "HTML Email template"
 ---
 *Personal project!*
 
-An html email template demonstration project using Subaru assets. I also assembled animated GIFs to add interest to the email.
+An html email template demonstration project using Subaru assets for a rebuild of a Subaru Gear marketing email. 
+
+I decided to lean into my graphic designer skillset here to make a clean and straightforward design.
+
+I also assembled animated GIFs in Figma to add interest to the email.
 
 <div>
 <iframe src="https://crowbell.design/subaru/main.html" style="width: 100%; max-width:600px; height: 100%; max-height: 800px;">
 </iframe>
 </div>
 
-![Desktop display screenshot of a Subaru email](../assets/subaru/desktop.png)
+Thanks to [Email Love](https://emaillove.com/ "Email Love") for inspiration!
 
-
-
-Contact me if you are interested in seeing my HTML for this project.
-
-Images copyright Subaru.
+Images copyright Subaru Gear.
