@@ -14,13 +14,13 @@ An html email template demonstration project using Subaru assets for a rebuild o
 
 I decided to lean into my graphic designer skillset here to make a clean and straightforward design.
 
-I also assembled animated GIFs in Figma to add interest to the email.
+I also assembled animated GIFs in [Figma](https://www.figma.com/design/ItEnCatsbYhPk4iP2nYMWi/Subaru-Gear-email-project?node-id=7-55&t=lyz2fF3bletzUHDU-1 "Figma Project") to add interest to the email.
 
 <div style="width: 100%; height: 100%; max-height: 800px;">
 <h2><span style="font-size: 1.3rem;">Subject Line: </span>Subaru Throwback Gear is Back</h2>
 <p>Preheader: <em>Timeless style for sustainable explorers</em> &#127748;</p>
-<div style="text-align: center; border: 1em solid white;">
-<iframe title="Subaru Gear marketing email" src="https://crowbell.design/subaru/main.html" style="width: 100%; max-width:600px; height: 600px;">
+<div style="text-align: center; background-color: #fff; padding: 0 1em;">
+<iframe title="Subaru Gear marketing email" src="https://crowbell.design/subaru/main.html" style="width: 100%; max-width:600px; height: 600px; margin: auto;">
 </div>
 </iframe>
 </div>
