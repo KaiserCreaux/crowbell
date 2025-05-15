@@ -17,7 +17,9 @@ I decided to lean into my graphic designer skillset here to make a clean and str
 I also assembled animated GIFs in Figma to add interest to the email.
 
 <div style="width: 100%; max-width:600px; height: 100%; max-height: 800px;">
-<iframe src="https://crowbell.design/subaru/main.html" style="width: 100%; max-width:600px; height: 100%; max-height: 800px;">
+<h3>Subject Line: <strong>Subaru Throwback Gear is Back</strong></h3>
+<h3>Preheader: <em>Timeless style for sustainable explorers &#127748;</em></h3>
+<iframe title="Subaru Gear marketing email" src="https://crowbell.design/subaru/main.html" style="width: 100%; max-width:600px; height: 100%; max-height: 800px;">
 </iframe>
 </div>
 
