@@ -1,0 +1,68 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { Image } from 'astro:assets';
+import { getCollection, getEntry } from 'astro:content';
+import type { ImageMetadata } from 'astro';
+import { render } from 'astro:content';
+import Nav from '../../components/Nav.astro';
+import Footer from '../../components/Footer.astro';
+
+// Get the id from the URL params
+//const { id } = Astro.params;
+
+// Debug: Log the id to see what's being received
+//console.log('Received id:', id);
+
+export async function getStaticPaths() {
+  const portfolioEntries = await getCollection('portfolio');
+  return portfolioEntries.map(item => ({
+    params: { id: item.id },
+    props: { item },
+  }));
+}
+
+// Safeguard against undefined id
+//if (!id) {
+//  return Astro.redirect('/404'); // Redirect to a 404 page if id is undefined
+//}
+
+// Fetch the entry using the id
+//const entry = await getEntry("portfolio", id);
+
+// If the entry doesn't exist, return a 404
+//if (!entry) {
+  //return Astro.redirect('/404');
+//}
+
+interface PortfolioItem {
+  title: string;
+  date: string;
+  slug: string;
+  image_url: ImageMetadata;
+  image_alt: string;
+  project_abstract: string;
+  project_roles: string;
+  project_deliverable: string;
+}
+// Type assertion to ensure entry.data matches our interface
+//const item: PortfolioItem = entry.data;
+const { item } = Astro.props;
+const { Content } = await render(item);
+---
+<Layout pageTitle={item.data.title}>
+  <div>
+    <h1 class="heading">
+    {item.data.title}
+    </h1>
+  </div>
+  <Image src={item.data.image_url} alt={item.data.image_alt} class="portfolioArticle"/>
+    <p>{item.data.date}</p>
+ 
+  <em>{item.data.project_abstract}</em>
+  <p>Project roles: {item.data.project_roles}</p>
+  <p>Project deliverables: {item.data.project_deliverable}</p>
+
+  <article {...item.data}>
+    <Content /> <!-- content is injected here -->
+  </article>
+</Layout>

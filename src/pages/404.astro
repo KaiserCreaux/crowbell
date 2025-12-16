@@ -1,0 +1,23 @@
+---
+import Layout from '../layouts/Layout.astro';
+const pageTitle = "Page not found."
+---
+<Layout pageTitle={pageTitle}>
+      <h1 class="headingStyles">Page not found</h1>
+      <img
+          width="300px"
+          height="300px"
+          alt="Cyberpunk 2077 Mr. Bean"
+          src="../images/404.png"
+        />
+      <p class="paragraphStyles"></p>
+
+        Sorry{" "}
+        <span role="img" aria-label="Pensive emoji">
+          😔
+        </span>{" "}
+        Our best nethacker couldn’t find what you were looking for.
+        <br />
+        <a href="/">Go home</a>.
+      </p>
+</Layout>
