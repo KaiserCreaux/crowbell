@@ -1,5 +1,4 @@
 ---
-
 title: "Alphasights Scheduling Page"
 date: "2014"
 slug: "alphasights"

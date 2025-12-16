@@ -183,3 +183,13 @@ a:focus {
 	color: #003844;
   }
   
+  @supports selector(:focus-visible) {
+	*:focus {
+		outline: none
+	}
+  
+	*:focus-visible {
+		outline:
+		 .5rem solid #CC4949;
+	}
+  }
